@@ -22,3 +22,5 @@ end, { desc = '[f]ind [m]an pages' })
 vim.keymap.set('n', ',fc', function()
   vim.api.nvim_command 'Telescope git_commits'
 end, { desc = '[f]ind [c]ommits' })
+
+vim.api.nvim_set_keymap('i', 'eE', '<cmd>Telescope symbols<cr>', { noremap = true })
