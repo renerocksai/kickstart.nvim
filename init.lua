@@ -618,6 +618,25 @@ require('lazy').setup({
         -- But for many setups, the LSP (`ts_ls`) will work just fine
         -- ts_ls = {},
         --
+        pylsp = {
+          settings = {
+            pylsp = {
+              plugins = {
+                pylint = { enabled = false },
+                pycodestyle = {
+                  -- unused
+                  enabled = true,
+                  ignore = { 'W391', 'E501', 'E231' },
+                  maxLineLength = 120,
+                },
+                flake8 = {
+                  -- this is in effect
+                  ignore = { 'E501' },
+                },
+              },
+            },
+          },
+        },
 
         lua_ls = {
           -- cmd = {...},
