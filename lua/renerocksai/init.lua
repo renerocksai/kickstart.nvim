@@ -1,0 +1,6 @@
+require 'renerocksai.fugitive'
+require 'renerocksai.nvim'
+require 'renerocksai.telescope'
+require 'renerocksai.telekasten'
+require 'renerocksai.umlauts'
+require 'renerocksai.vimux'

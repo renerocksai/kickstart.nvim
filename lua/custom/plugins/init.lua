@@ -11,7 +11,13 @@ return {
   'ziglang/zig.vim',
   'nvim-telescope/telescope-media-files.nvim',
   'nvim-telescope/telescope-symbols.nvim',
-  'declancm/cinnamon.nvim',
+  {
+    'declancm/cinnamon.nvim',
+    version = '*', -- use latest release
+    opts = {
+      -- change default options here
+    },
+  },
   'renerocksai/telekasten.nvim',
   'https://git.sr.ht/~renerocksai/calendar-vim',
   'MunifTanjim/nui.nvim',
