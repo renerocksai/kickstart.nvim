@@ -1,5 +1,6 @@
-require 'rene.nvim'
 require 'rene.fugitive'
-require 'rene.vimux'
+require 'rene.nvim'
 require 'rene.telescope'
+require 'rene.telekasten'
+require 'rene.umlauts'
 require 'rene.vimux'
