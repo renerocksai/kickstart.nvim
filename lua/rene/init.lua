@@ -1,0 +1,5 @@
+require 'rene.keybinds-nvim'
+require 'rene.keybinds-fugitive'
+require 'rene.keybinds-vimux'
+require 'rene.keybinds-telescope'
+require 'rene.keybinds-vimux'
