@@ -1,4 +1,6 @@
+require 'renerocksai.chatgpt'
 require 'renerocksai.fugitive'
+require 'renerocksai.mdmail'
 require 'renerocksai.nvim'
 require 'renerocksai.telescope'
 require 'renerocksai.telekasten'

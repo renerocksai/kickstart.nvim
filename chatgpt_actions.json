@@ -1,0 +1,92 @@
+{
+  "turbo-sum": {
+    "type": "chat",
+    "opts": {
+      "template": "Summarize the following text.\n\nText:\n\"\"\"\n{{input}}\n\"\"\"\n\nSummary:",
+      "params": {
+        "model": "gpt-3.5-turbo"
+      }
+    }
+  },
+
+  "gpt4-passthrough": {
+    "type": "chat",
+    "opts": {
+      "template": "{{input}}",
+      "params": {
+        "model": "gpt-4o",
+        "max_tokens": 2048
+      }
+    }
+  },
+
+
+  "gpt4-clear-and-concise": {
+    "type": "chat",
+    "opts": {
+      "template": "{{input}}\nReword above paragraph to make it more clear and concise.",
+      "params": {
+        "model": "gpt-4o",
+        "max_tokens": 2048
+      }
+    }
+  },
+  "gpt4-clear-and-concise-with-refs": {
+    "type": "chat",
+    "opts": {
+      "template": "{{input}}\nReword above paragraph to make it more clear and concise. Please keep the references in the text.",
+      "params": {
+        "model": "gpt-4o",
+        "max_tokens": 2048
+      }
+    }
+  },
+
+
+  "en-professional": {
+    "type": "chat",
+    "opts": {
+      "template": "Make the following text sound more professional.\n\nText:\n\"\"\"\n{{input}}\n\"\"\"\n\nProfessional version:",
+      "params": {
+        "model": "gpt-4o"
+      }
+    }
+  },
+  "en-easy": {
+    "type": "chat",
+    "opts": {
+      "template": "Make the following text sound easier to understand for the general public.\n\nText:\n\"\"\"\n{{input}}\n\"\"\"\n\nEasier to understand version:",
+      "params": {
+        "model": "gpt-4o"
+      }
+    }
+  },
+
+  "en-friendly": {
+    "type": "chat",
+    "opts": {
+      "template": "Make the following e-mail sound more friendly.\n\nE-Mail:\n\"\"\"\n{{input}}\n\"\"\"\n\nFriendly version:",
+      "params": {
+        "model": "gpt-4o"
+      }
+    }
+  },
+  "de-friendly": {
+    "type": "chat",
+    "opts": {
+      "template": "Make the following e-mail sound more friendly. Answer in German\n\nE-Mail:\n\"\"\"\n{{input}}\n\"\"\"\n\nFriendly version in German:",
+      "params": {
+        "model": "gpt-4o"
+      }
+    }
+  },
+  "readme": {
+    "type": "chat",
+    "opts": {
+      "template": "Write a GitHub README.md file for the following code.\n\nCode:\n\"\"\"\n{{input}}\n\"\"\"\n\nREADME.md:",
+      "params": {
+        "model": "gpt-4o"
+      }
+    }
+  }
+}
