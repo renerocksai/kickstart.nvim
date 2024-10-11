@@ -111,6 +111,7 @@ end, { remap = false })
 
 -- noremap <leader>P :MarkdownPreviewToggle<CR>
 
+-- TODO: convert this to lua
 vim.cmd [[
 " autocmd FileType markdown set syntax=telekasten
 
