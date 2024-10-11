@@ -64,10 +64,10 @@ require('telekasten').setup {
 local telekasten = require 'telekasten'
 
 vim.keymap.set('n', '<leader>nf', telekasten.find_notes, { desc = 'find notes', remap = false })
-vim.keymap.set('n', '<leader>nd', telekasten.find_daily_notes, { desc = 'find daily notes', remap = false })
+vim.keymap.set('n', '<leader>nD', telekasten.find_daily_notes, { desc = 'find daily notes', remap = false })
 vim.keymap.set('n', '<leader>ng', telekasten.search_notes, { desc = 'g search notes', remap = false })
 vim.keymap.set('n', '<leader>nz', telekasten.follow_link, { desc = 'z follow link', remap = false })
-vim.keymap.set('n', '<leader>nt', telekasten.goto_today, { desc = 'goto today', remap = false })
+vim.keymap.set('n', '<leader>nd', telekasten.goto_today, { desc = 'goto today', remap = false })
 vim.keymap.set('n', '<leader>nW', telekasten.goto_thisweek, { desc = 'goto this Week', remap = false })
 vim.keymap.set('n', '<leader>nw', telekasten.find_weekly_notes, { desc = 'find weekly notes', remap = false })
 vim.keymap.set('n', '<leader>nn', telekasten.new_note, { desc = 'new note', remap = false })
@@ -99,7 +99,6 @@ end, { desc = 'reload Telekasten', remap = false })
 -- " mode
 --
 --
--- somehow these don't work
 vim.keymap.set('i', ',[', function()
   telekasten.insert_link { i = true }
 end, { remap = false })
