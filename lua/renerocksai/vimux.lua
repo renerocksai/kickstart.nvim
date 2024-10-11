@@ -1,11 +1,6 @@
 -- Vimux
-vim.keymap.set('n', ',T', function()
-  vim.api.nvim_command 'VimuxPromptCommand'
-end, { desc = 'Vimux Promp[T] command' })
-
-vim.keymap.set('n', ',t', function()
-  vim.api.nvim_command 'VimuxRunLastCommand'
-end, { desc = 'Vimux run last command' })
+vim.keymap.set('n', ',T', '<cmd>VimuxPromptCommand<cr>', { desc = 'Vimux Prompt command' })
+vim.keymap.set('n', ',t', '<cmd>VimuxRunLastCommand<cr>', { desc = 'Vimux run last command' })
 
 vim.cmd [[
 " tmux navigator

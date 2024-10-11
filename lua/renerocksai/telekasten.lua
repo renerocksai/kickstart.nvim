@@ -64,27 +64,27 @@ require('telekasten').setup {
 local telekasten = require 'telekasten'
 
 vim.keymap.set('n', '<leader>nf', telekasten.find_notes, { desc = 'find notes', remap = false })
-vim.keymap.set('n', '<leader>nd', telekasten.find_daily_notes, { desc = 'find [d]aily notes', remap = false })
-vim.keymap.set('n', '<leader>ng', telekasten.search_notes, { desc = '[g] search notes', remap = false })
-vim.keymap.set('n', '<leader>nz', telekasten.follow_link, { desc = '[z] follow link', remap = false })
-vim.keymap.set('n', '<leader>nt', telekasten.goto_today, { desc = 'goto [t]oday', remap = false })
-vim.keymap.set('n', '<leader>nW', telekasten.goto_thisweek, { desc = 'goto this [W]eek', remap = false })
-vim.keymap.set('n', '<leader>nw', telekasten.find_weekly_notes, { desc = 'find [w]eekly notes', remap = false })
-vim.keymap.set('n', '<leader>nn', telekasten.new_note, { desc = '[n]ew note', remap = false })
+vim.keymap.set('n', '<leader>nd', telekasten.find_daily_notes, { desc = 'find daily notes', remap = false })
+vim.keymap.set('n', '<leader>ng', telekasten.search_notes, { desc = 'g search notes', remap = false })
+vim.keymap.set('n', '<leader>nz', telekasten.follow_link, { desc = 'z follow link', remap = false })
+vim.keymap.set('n', '<leader>nt', telekasten.goto_today, { desc = 'goto today', remap = false })
+vim.keymap.set('n', '<leader>nW', telekasten.goto_thisweek, { desc = 'goto this Week', remap = false })
+vim.keymap.set('n', '<leader>nw', telekasten.find_weekly_notes, { desc = 'find weekly notes', remap = false })
+vim.keymap.set('n', '<leader>nn', telekasten.new_note, { desc = 'new note', remap = false })
 vim.keymap.set('n', '<leader>nN', telekasten.new_templated_note, { desc = 'new templated note', remap = false })
-vim.keymap.set('n', '<leader>ny', telekasten.yank_notelink, { desc = '[y]ank note link', remap = false })
-vim.keymap.set('n', '<leader>nc', telekasten.show_calendar, { desc = 'show [c]alendar', remap = false })
-vim.keymap.set('n', '<leader>ni', telekasten.paste_img_and_link, { desc = 'paste [i]mage and link', remap = false })
-vim.keymap.set('n', '<leader>nt', telekasten.toggle_todo, { desc = 'toggle [t]odo', remap = false })
-vim.keymap.set('n', '<leader>nb', telekasten.show_backlinks, { desc = 'show [b]acklinks', remap = false })
-vim.keymap.set('n', '<leader>nF', telekasten.find_friends, { desc = 'find [F]riend notes', remap = false })
-vim.keymap.set('n', '<leader>np', telekasten.preview_img, { desc = '[p]review image', remap = false })
-vim.keymap.set('n', '<leader>nm', telekasten.browse_media, { desc = 'browse [m]edia', remap = false })
+vim.keymap.set('n', '<leader>ny', telekasten.yank_notelink, { desc = 'yank note link', remap = false })
+vim.keymap.set('n', '<leader>nc', telekasten.show_calendar, { desc = 'show calendar', remap = false })
+vim.keymap.set('n', '<leader>ni', telekasten.paste_img_and_link, { desc = 'paste image and link', remap = false })
+vim.keymap.set('n', '<leader>nt', telekasten.toggle_todo, { desc = 'toggle todo', remap = false })
+vim.keymap.set('n', '<leader>nb', telekasten.show_backlinks, { desc = 'show backlinks', remap = false })
+vim.keymap.set('n', '<leader>nF', telekasten.find_friends, { desc = 'find Friend notes', remap = false })
+vim.keymap.set('n', '<leader>np', telekasten.preview_img, { desc = 'preview image', remap = false })
+vim.keymap.set('n', '<leader>nm', telekasten.browse_media, { desc = 'browse media', remap = false })
 -- panel not required in kickstart b/c whichkeys
 -- vim.keymap.set('n', '<leader>n', telekasten.panel, { desc='', remap = false })
 vim.keymap.set('n', '<leader>na', telekasten.show_tags, { desc = 'show tags', remap = false })
 
-vim.keymap.set('n', '<leader>nC', '<cmd>CalendarT<CR>', { desc = 'show big [C]alendar', remap = false })
+vim.keymap.set('n', '<leader>nC', '<cmd>CalendarT<CR>', { desc = 'show big Calendar', remap = false })
 
 vim.keymap.set('n', '<leader>nI', function()
   telekasten.insert_img_link { i = true }
@@ -92,7 +92,7 @@ end, { desc = 'insert image link', remap = false })
 
 vim.keymap.set('n', '<leader>nr', function()
   require('plenary.reload').reload_module 'telekasten'
-end, { desc = '[r]eload Telekasten', remap = false })
+end, { desc = 'reload Telekasten', remap = false })
 
 -- " note: we define [[ in **insert mode** to call insert link
 -- " note: we don't do this anymore - maybe it makes sense to limit to markdown

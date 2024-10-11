@@ -1,26 +1,9 @@
 -- Telescope
-vim.keymap.set('n', ',ff', function()
-  vim.api.nvim_command 'Telescope find_files'
-end, { desc = '[f]ind [f]files' })
+vim.keymap.set('n', ',ff', '<cmd>Telescope find_files<cr>', { desc = 'find files' })
+vim.keymap.set('n', ',fg', '<cmd>Telescope live_grep<cr>', { desc = 'find grep' })
+vim.keymap.set('n', ',fb', '<cmd>Telescope buffers<cr>', { desc = 'find buffers - use <spc><spc>!' })
+vim.keymap.set('n', ',fh', '<cmd>Telescope help_tags<cr>', { desc = 'find help' })
+vim.keymap.set('n', ',fm', '<cmd>Telescope man_pages<cr>', { desc = 'find man pages' })
+vim.keymap.set('n', ',fc', '<cmd>Telescope git_commits<cr>', { desc = 'find commits' })
 
-vim.keymap.set('n', ',fg', function()
-  vim.api.nvim_command 'Telescope live_grep'
-end, { desc = '[f]ind [g]rep' })
-
-vim.keymap.set('n', ',fb', function()
-  vim.api.nvim_command 'Telescope buffers'
-end, { desc = '[f]ind [b]uffers - use <spc><spc>!' })
-
-vim.keymap.set('n', ',fh', function()
-  vim.api.nvim_command 'Telescope help_tags'
-end, { desc = '[f]ind [h]elp' })
-
-vim.keymap.set('n', ',fm', function()
-  vim.api.nvim_command 'Telescope man_pages'
-end, { desc = '[f]ind [m]an pages' })
-
-vim.keymap.set('n', ',fc', function()
-  vim.api.nvim_command 'Telescope git_commits'
-end, { desc = '[f]ind [c]ommits' })
-
-vim.api.nvim_set_keymap('i', 'eE', '<cmd>Telescope symbols<cr>', { noremap = true })
+vim.api.nvim_set_keymap('i', 'eE', '<cmd>Telescope symbols<cr>', { silent = true, noremap = true })
