@@ -24,4 +24,8 @@ return {
   'renerocksai/ChatGPT.nvim',
   'renerocksai/CommandPrompt.nvim',
   'elihunter173/dirbuf.nvim',
+  {
+    'https://git.sr.ht/~whynothugo/lsp_lines.nvim',
+    opts = {},
+  },
 }

@@ -1,5 +1,6 @@
 require 'renerocksai.chatgpt'
 require 'renerocksai.fugitive'
+require 'renerocksai.lsp_lines'
 require 'renerocksai.mdmail'
 require 'renerocksai.nvim'
 require 'renerocksai.snips'

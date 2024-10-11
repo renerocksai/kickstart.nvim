@@ -9,6 +9,9 @@ vim.keymap.set('n', '#', '#zz', { remap = false })
 vim.keymap.set('n', 'g*', 'g*zz', { remap = false })
 vim.keymap.set('n', 'g#', 'g#zz', { remap = false })
 
+-- open diagnostics float
+vim.keymap.set('n', '<leader>I', vim.diagnostic.open_float, { desc = 'diagnostics info float', remap = false })
+
 -- options
 vim.opt.colorcolumn = '80'
 vim.opt.tabstop = 4
