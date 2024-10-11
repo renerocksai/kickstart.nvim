@@ -6,4 +6,9 @@ vim.keymap.set('n', ',fh', '<cmd>Telescope help_tags<cr>', { desc = 'find help' 
 vim.keymap.set('n', ',fm', '<cmd>Telescope man_pages<cr>', { desc = 'find man pages' })
 vim.keymap.set('n', ',fc', '<cmd>Telescope git_commits<cr>', { desc = 'find commits' })
 
-vim.api.nvim_set_keymap('i', 'eE', '<cmd>Telescope symbols<cr>', { silent = true, noremap = true })
+-- open emoji picker
+vim.api.nvim_set_keymap('i', '..e', '<cmd>Telescope symbols<cr>', { silent = true, noremap = true })
+vim.api.nvim_set_keymap('i', ',,e', '<cmd>Telescope symbols<cr>', { silent = true, noremap = true })
+
+-- ; -> :
+vim.keymap.set('n', ';', ':', { remap = false })
