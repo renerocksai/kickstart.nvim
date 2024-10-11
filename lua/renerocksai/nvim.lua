@@ -21,3 +21,7 @@ vim.opt.softtabstop = 4
 
 -- allow .nvim.lua local configs
 vim.opt.exrc = true
+
+vim.opt.visualbell = true
+
+vim.opt.termguicolors = true
