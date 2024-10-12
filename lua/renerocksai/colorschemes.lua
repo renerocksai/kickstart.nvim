@@ -14,6 +14,7 @@ local function toggle_tokyonight()
     -- If colorscheme is unexpected, set it to tokyonight-moon
     vim.cmd 'colorscheme tokyonight-moon'
   end
+  require('renerocksai.mini_indentscope').Set_Indentscope_Highlight()
 end
 
 vim.keymap.set('n', 'tt', toggle_tokyonight, { desc = 'toggle tokyonight colorscheme', silent = true })
