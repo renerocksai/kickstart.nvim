@@ -1,5 +1,6 @@
 -- Font name variable
 local font_name = 'JetBrainsMonoNL Nerd Font Mono'
+local start_size = '12'
 
 -- Function to get the current font size
 local function get_font_size()
@@ -33,7 +34,7 @@ if vim.g.neovide then
   vim.keymap.set('c', '<D-v>', '<C-R>+') -- Paste command mode
   vim.keymap.set('i', '<D-v>', '<ESC>l"+Pli') -- Paste insert mode
 
-  vim.o.guifont = 'JetBrainsMonoNL Nerd Font Mono:h10'
+  vim.o.guifont = font_name .. ':h' .. start_size
 
   -- keymaps on the mac:
   --replace D with C for control+
