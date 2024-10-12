@@ -1,6 +1,15 @@
 -- keymaps
 vim.keymap.set('i', 'jk', '<esc>', { desc = 'esc to normal mode' })
 
+vim.keymap.set('n', 'j', 'gj', { desc = 'go down 1 screen line' })
+vim.keymap.set('n', 'k', 'gk', { desc = 'go up 1 screen line' })
+
+-- resize windows via jklh keys if mouse cannot dig it
+vim.keymap.set('n', ',j', ':exe "resize +5" <CR>', { silent = true, desc = 'resize window +5 lines' })
+vim.keymap.set('n', ',k', ':exe "resize -5" <CR>', { silent = true, desc = 'resize window -5 lines' })
+vim.keymap.set('n', ',l', ':exe "vertical resize +5" <CR>', { silent = true, desc = 'resize window +5 cols' })
+vim.keymap.set('n', ',h', ':exe "vertical resize -5" <CR>', { silent = true, desc = 'resize window -5 cols' })
+
 -- vertically center search result position
 vim.keymap.set('n', 'n', 'nzz', { remap = false })
 vim.keymap.set('n', 'N', 'Nzz', { remap = false })
