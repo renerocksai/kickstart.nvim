@@ -639,6 +639,18 @@ require('lazy').setup({
           },
         },
 
+        ltex = {
+          settings = {
+            ltex = {
+              language = 'en',
+              additionalRules = {
+                -- if present
+                languageModel = '~/models/ngrams/',
+              },
+            },
+          },
+        },
+
         lua_ls = {
           -- cmd = {...},
           -- filetypes = { ...},
