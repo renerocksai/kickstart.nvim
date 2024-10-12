@@ -6,6 +6,8 @@ vim.api.nvim_create_autocmd('FileType', {
   end,
 })
 
--- Define normal mode key mappings
-vim.api.nvim_set_keymap('n', '<space>b', ':cclose<CR>:make!<bar>cwindow<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<space>B', ':cclose<CR>:silent make!<bar>cwindow<CR>', { noremap = true, silent = true })
+-- Build with :make
+-- WARNING: conflicts with DAP set breakpoint
+-- So if you use DAP, change these:
+vim.api.nvim_set_keymap('n', '<leader>b', ':cclose<CR>:make!<bar>cwindow<CR>', { noremap = true, silent = true, desc = 'Build with :make' })
+vim.api.nvim_set_keymap('n', '<leader>B', ':cclose<CR>:silent make!<bar>cwindow<CR>', { noremap = true, silent = true, desc = 'Build silently with :make' })
