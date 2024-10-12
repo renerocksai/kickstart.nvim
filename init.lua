@@ -924,6 +924,7 @@ require('lazy').setup({
       --  Check out: https://github.com/echasnovski/mini.nvim
       require('mini.indentscope').setup {
         draw = { delay = 10 },
+        symbol = '┊',
       }
     end,
   },

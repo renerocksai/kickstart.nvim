@@ -7,7 +7,7 @@ return {
     opts = {
       indent = { char = '┊' },
       scope = {
-        enabled = true,
+        enabled = false,
         show_start = true,
         show_end = false,
         exclude = {
