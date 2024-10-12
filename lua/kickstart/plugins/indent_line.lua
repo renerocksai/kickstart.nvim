@@ -6,7 +6,16 @@ return {
     main = 'ibl',
     opts = {
       indent = { char = '┊' },
-      scope = { enabled = true },
+      scope = {
+        enabled = true,
+        show_start = true,
+        show_end = false,
+        exclude = {
+          language = {
+            'help',
+          },
+        },
+      },
     },
   },
 }
