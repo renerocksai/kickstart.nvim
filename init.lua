@@ -642,6 +642,7 @@ require('lazy').setup({
         ltex = {
           settings = {
             ltex = {
+              enabled = { 'bibtex', 'context', 'context.tex', 'html', 'latex', 'markdown', 'org', 'restructuredtext', 'rsweave', 'supermd' },
               language = 'en',
               additionalRules = {
                 -- if present
