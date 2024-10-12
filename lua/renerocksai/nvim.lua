@@ -21,6 +21,10 @@ vim.keymap.set('n', 'g#', 'g#zz', { remap = false })
 -- open diagnostics float
 vim.keymap.set('n', '<leader>I', vim.diagnostic.open_float, { desc = 'diagnostics info float', remap = false })
 
+-- NOTE: kickstart has a cooler mapping: <esc><esc> for this!
+-- in terminal, press <leader><esc> to go to command mode
+vim.keymap.set('t', '<leader><Esc>', '<C-\\><C-n>', { remap = false, desc = 'terminal: goto vim command mode' })
+
 -- options
 vim.opt.colorcolumn = '80'
 vim.opt.tabstop = 4
@@ -34,6 +38,9 @@ vim.opt.exrc = true
 vim.opt.visualbell = true
 
 vim.opt.termguicolors = true
+
+-- Don't pass messages to |ins-completion-menu|.
+vim.opt.shortmess = vim.opt.shortmess + 'c'
 
 local highlight = {
   'RainbowRed',
