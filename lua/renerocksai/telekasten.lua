@@ -98,37 +98,94 @@ end, { desc = 'reload Telekasten', remap = false })
 -- " note: we don't do this anymore - maybe it makes sense to limit to markdown
 -- " mode
 --
---
+-- ,[ -> insert link
 vim.keymap.set('i', ',[', function()
   telekasten.insert_link { i = true }
 end, { remap = false })
-vim.keymap.set('i', ',zt', function()
-  telekasten.toggle_todo { i = true }
-end, { remap = false })
+
+-- ,# -> insert tag
 vim.keymap.set('i', ',#', function()
   telekasten.show_tags { i = true }
 end, { remap = false })
 
+-- ,zt -> toggle todo
+vim.keymap.set('i', ',zt', function()
+  telekasten.toggle_todo { i = true }
+end, { remap = false })
+
 -- noremap <leader>P :MarkdownPreviewToggle<CR>
 
--- TODO: convert this to lua
-vim.cmd [[
-" autocmd FileType markdown set syntax=telekasten
+-- Autocommand to set the syntax for markdown files
+-- disabled
+-- vim.api.nvim_create_autocmd('FileType', {
+--   pattern = 'markdown',
+--   callback = function()
+--     vim.opt_local.syntax = 'telekasten'
+--   end,
+-- })
 
-autocmd FileType telekasten nnoremap <CR> :lua require('telekasten').follow_link()<CR>
+-- Autocommand to map <CR> for telekasten filetype
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = 'telekasten',
+  callback = function()
+    vim.api.nvim_buf_set_keymap(0, 'n', '<CR>', ":lua require('telekasten').follow_link()<CR>", { noremap = true, silent = true })
+  end,
+})
 
-hi tklink ctermfg=72 guifg=#689d6a cterm=bold,underline gui=bold,underline
-hi tkBrackets ctermfg=gray guifg=gray
+-- Disable signcolumn for calendar filetype
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = 'calendar',
+  callback = function()
+    vim.opt_local.signcolumn = 'no'
+  end,
+})
 
-" real yellow
-hi tkHighlight ctermbg=yellow ctermfg=darkred cterm=bold guibg=yellow guifg=darkred gui=bold
-" gruvbox
-hi tkHighlight ctermbg=214 ctermfg=124 cterm=bold guibg=#fabd2f guifg=#9d0006 gui=bold
+-- Highlight groups definition
+-- Highlight for tklink
+vim.api.nvim_set_hl(0, 'tklink', {
+  ctermfg = 72,
+  fg = '#689d6a',
+  bold = true,
+  underline = true,
+})
 
-hi link CalNavi CalRuler
-hi tkTagSep ctermfg=gray guifg=gray
-hi tkTag ctermfg=175 guifg=#d3869B
+-- Highlight for tkBrackets
+vim.api.nvim_set_hl(0, 'tkBrackets', {
+  ctermfg = 'gray',
+  fg = 'gray',
+})
 
-"autocmd filetype calendar :IndentBlanklineDisable
-autocmd filetype calendar :set signcolumn=no
-]]
+-- Highlight for tkHighlight (real yellow)
+vim.api.nvim_set_hl(0, 'tkHighlight', {
+  ctermbg = 'yellow',
+  ctermfg = 'darkred',
+  bg = 'yellow',
+  fg = 'darkred',
+  bold = true,
+})
+
+-- Highlight for tkHighlight (gruvbox)
+vim.api.nvim_set_hl(0, 'tkHighlight', {
+  ctermbg = 214,
+  ctermfg = 124,
+  bg = '#fabd2f',
+  fg = '#9d0006',
+  bold = true,
+})
+
+-- Linking highlight group CalNavi to CalRuler
+vim.api.nvim_set_hl(0, 'CalNavi', {
+  link = 'CalRuler',
+})
+
+-- Highlight for tkTagSep
+vim.api.nvim_set_hl(0, 'tkTagSep', {
+  ctermfg = 'gray',
+  fg = 'gray',
+})
+
+-- Highlight for tkTag
+vim.api.nvim_set_hl(0, 'tkTag', {
+  ctermfg = 175,
+  fg = '#d3869B',
+})
