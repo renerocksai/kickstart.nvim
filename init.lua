@@ -640,6 +640,7 @@ require('lazy').setup({
         },
 
         ltex = {
+          filetypes = { 'bibtex', 'context', 'context.tex', 'html', 'latex', 'markdown', 'org', 'restructuredtext', 'rsweave', 'supermd' },
           settings = {
             ltex = {
               enabled = { 'bibtex', 'context', 'context.tex', 'html', 'latex', 'markdown', 'org', 'restructuredtext', 'rsweave', 'supermd' },
