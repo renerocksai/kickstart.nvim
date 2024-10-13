@@ -3,8 +3,8 @@
 --  artificial ESC
 vim.keymap.set('i', 'jk', '<esc>', { desc = 'esc to normal mode' })
 
-vim.keymap.set('n', 'C-n', '<cmd>cn<cr>', { desc = 'next in quickfix list' })
-vim.keymap.set('n', 'C-p', '<cmd>cp<cr>', { desc = 'prev in quickfix list' })
+vim.keymap.set('n', '<C-n>', '<cmd>cn<cr>', { desc = 'next in quickfix list' })
+vim.keymap.set('n', '<C-p>', '<cmd>cp<cr>', { desc = 'prev in quickfix list' })
 
 vim.keymap.set('n', 'j', 'gj', { desc = 'go down 1 screen line' })
 vim.keymap.set('n', 'k', 'gk', { desc = 'go up 1 screen line' })
