@@ -4,6 +4,14 @@
 -- See the kickstart.nvim README for more information
 return {
   'tpope/vim-fugitive',
+  {
+    'rbong/vim-flog',
+    lazy = true,
+    cmd = { 'Flog', 'Flogsplit', 'Floggit' },
+    dependencies = {
+      'tpope/vim-fugitive',
+    },
+  },
   'Bekaboo/dropbar.nvim',
   'benmills/vimux',
   'roxma/vim-tmux-clipboard',
@@ -19,11 +27,20 @@ return {
     },
   },
   'renerocksai/telekasten.nvim',
-  'https://git.sr.ht/~renerocksai/calendar-vim',
+  'renerocksai/calendar-vim',
   'MunifTanjim/nui.nvim',
   'renerocksai/ChatGPT.nvim',
   'renerocksai/CommandPrompt.nvim',
-  'elihunter173/dirbuf.nvim',
+  -- 'elihunter173/dirbuf.nvim',  -- the old way: still love it
+  -- but let's try oil
+  {
+    'stevearc/oil.nvim',
+    opts = {},
+    -- Optional dependencies
+    -- dependencies = { { "echasnovski/mini.icons", opts = {} } },
+    dependencies = { 'nvim-tree/nvim-web-devicons' }, -- use if prefer nvim-web-devicons
+  },
+  -- fuck that guy
   -- {
   --   'https://git.sr.ht/~whynothugo/lsp_lines.nvim',
   --   opts = {},
