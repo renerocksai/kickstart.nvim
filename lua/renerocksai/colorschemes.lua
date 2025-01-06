@@ -4,12 +4,16 @@ local function toggle_tokyonight()
 
   -- Check the current colorscheme and toggle accordingly
   print('colorscheme is', current_scheme)
-  if current_scheme == 'tokyonight-day' then
+  if current_scheme == 'dayfox' then
+    vim.cmd 'colorscheme nordfox'
+  elseif current_scheme == 'nordfox' then
     vim.cmd 'colorscheme tokyonight-moon'
   elseif current_scheme == 'tokyonight-moon' then
     vim.cmd 'colorscheme tokyonight-night'
   elseif current_scheme == 'tokyonight-night' then
     vim.cmd 'colorscheme tokyonight-day'
+  elseif current_scheme == 'tokyonight-day' then
+    vim.cmd 'colorscheme dayfox'
   else
     -- If colorscheme is unexpected, set it to tokyonight-moon
     vim.cmd 'colorscheme tokyonight-moon'

@@ -82,4 +82,7 @@ return {
       },
     },
   },
+  {
+    'EdenEast/nightfox.nvim',
+  },
 }
