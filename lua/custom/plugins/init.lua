@@ -85,4 +85,25 @@ return {
   {
     'EdenEast/nightfox.nvim',
   },
+  {
+    'Mofiqul/vscode.nvim',
+  },
+  {
+    'maxmx03/solarized.nvim',
+    lazy = false,
+    priority = 1000,
+    -- ---@type solarized.config
+    opts = {
+      variant = 'autumn',
+      palette = 'selenized',
+      plugins = {},
+    },
+    config = function(_, opts)
+      opts.variant = 'autumn'
+      vim.o.termguicolors = true
+      vim.o.background = 'light'
+      require('solarized').setup(opts)
+      -- vim.cmd.colorscheme 'solarized'
+    end,
+  },
 }
