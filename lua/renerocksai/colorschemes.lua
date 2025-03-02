@@ -1,8 +1,8 @@
 -- we need this, especially with solarized_light
 vim.opt.guicursor = 'n-v-c:block-Cursor,i-ci-ve:ver25-Cursor,r-cr:hor20-Cursor,o:hor50-Cursor'
 
-require 'neo-tree'
-print(vim.inspect(vim.api.nvim_get_hl(0, { name = 'NeoTreeCursorLine' })))
+-- require 'neo-tree'
+-- print(vim.inspect(vim.api.nvim_get_hl(0, { name = 'NeoTreeCursorLine' })))
 
 -- setup vscode.nvim
 -- For dark theme (neovim's default)
