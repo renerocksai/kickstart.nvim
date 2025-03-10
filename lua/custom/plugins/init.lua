@@ -99,7 +99,7 @@ return {
       plugins = {},
     },
     config = function(_, opts)
-      opts.variant = 'autumn'
+      opts.variant = 'winter'
       vim.o.termguicolors = true
       vim.o.background = 'light'
       require('solarized').setup(opts)
