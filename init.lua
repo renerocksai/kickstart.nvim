@@ -771,6 +771,7 @@ require('lazy').setup({
         return {
           timeout_ms = 500,
           lsp_format = lsp_format_opt,
+          formatters = { 'trim_whitespace' }, -- make sure this always runs for not disabled filetypes
         }
       end,
       formatters = {
