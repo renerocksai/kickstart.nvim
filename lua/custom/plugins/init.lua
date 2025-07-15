@@ -106,4 +106,6 @@ return {
       -- vim.cmd.colorscheme 'solarized'
     end,
   },
+
+  { 'glacambre/firenvim', build = ":call firenvim#install(0)" },
 }

@@ -119,7 +119,9 @@ require('commandprompt').setup {
     cmd = ':ChatGPTRun pass-through',
   },
 }
+
 -- Add a keymapping to open the command picker
 vim.keymap.set('v', '<leader>g', function()
+  vim.inspect(require('commandprompt'))
   require('commandprompt').command_picker()
 end, { desc = 'Open ChatGPT command prompt picker', noremap = true, silent = true })

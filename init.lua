@@ -1159,5 +1159,19 @@ vim.filetype.add {
 }
 
 require 'renerocksai'
+-- init.lua
+local jujutsu = require('renerocksai.jj')
+
+-- Example keybindings:
+vim.keymap.set('n', '<leader>jjl', function() jujutsu.jj_log_picker() end, { desc = 'JJ Log (Telescope)' })
+vim.keymap.set('n', '<leader>jjc', function() jujutsu.jj_commit() end, { desc = 'JJ Commit' })
+
+--Example with callback after commit
+vim.keymap.set('n', '<leader>jjca', function()
+    jujutsu.jj_commit(function()
+        vim.notify("JJ commit completed!", vim.log.levels.INFO)
+    end)
+end, { desc = 'JJ Commit (with callback)' })
+
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et

@@ -1,6 +1,8 @@
 require 'renerocksai.colorschemes'
 require 'renerocksai.chatgpt'
+require 'renerocksai.firenvim'
 require 'renerocksai.fugitive'
+require 'renerocksai.jj'
 require 'renerocksai.lsp_lines'
 require 'renerocksai.make'
 require 'renerocksai.mdmail'
